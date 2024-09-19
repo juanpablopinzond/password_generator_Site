@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #344e41;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Libre Franklin;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid black;
+    width: 50%;
+    height: 80%;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 3px black;
+    border-radius: 5px;
+}
+
+#border_line {
+    height: 5%;
+    width: 100%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.179);
+}
+
+span {
+    color: #2bec51;
+    display: block;
+}
+
+h1 {
+    font-size: 3em;
+    color: white;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    text-shadow: 2px 2px 3px black;
+}
+
+h3 {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+#generate_password_btn {
+    padding: 10px 15px 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2bec51;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 5px 3px black;
+    cursor: pointer;
+}
+
+.btns {
+    display: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    background-color: #2bec51;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    box-shadow: 2px 2px 5px 3px black;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px;
+    font-weight: 900;
+    background-color: #2bec51;
+    border: none;
+    box-shadow: 2px 2px 5px 3px black;
+    text-shadow: 2px 2px 3px black;
+    color: white;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#scd_password_btn {
+    margin-left: 20px;
+}
+
+#notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translateX(-50%);
+}
+
+#notification.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
